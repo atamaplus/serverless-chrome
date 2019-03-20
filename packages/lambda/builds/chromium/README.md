@@ -2,7 +2,8 @@
 
 1. EC2インスタンスを立てます
   - コンピューティング最適化インスタンス (c5.18xlargeを使いました)
-  - Amazon Linux (2018.03) を使用
+  - `Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type` を使用
+  - SSDが100GBくらい必要
 
 2. コードを準備
   - 手順
