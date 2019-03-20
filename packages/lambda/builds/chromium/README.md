@@ -13,7 +13,7 @@
 3. 下準備
   - うまく行った方法だけ書きます
     1. `export VERSION=74.0.3723.0` (https://github.com/GoogleChrome/puppeteer/releases/tag/v1.13.0 が使っているバージョン)
-    1. `mkdir -p build/chromium build/bin`
+    1. `mkdir -p build/chromium bin`
     1. `cp .gclient build/chromium/.gclient`
     1. `sh build.sh`
 
