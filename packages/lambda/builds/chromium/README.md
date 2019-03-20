@@ -1,3 +1,23 @@
+# EC2インスタンス上でのビルド方法
+
+1. EC2インスタンスを立てます
+  - コンピューティング最適化インスタンス (c5.18xlargeを使いました)
+  - Amazon Linux (2018.03) を使用
+
+2. コードを準備
+  - 手順
+    1. `sudo su` でrootユーザになる
+    1. `https://github.com/atamaplus/serverless-chrome` をclone
+    1. `packages/lambda/builds/chromium/build` へ移動
+
+3. 下準備
+  - うまく行った方法だけ書きます
+    1. `export VERSION=74.0.3723.0` (https://github.com/GoogleChrome/puppeteer/releases/tag/v1.13.0 が使っているバージョン)
+    1. `mkdir -p build/chromium build/bin`
+    1. `cp .gclient build/chromium/.gclient`
+    1. `sh build.sh`
+
+
 # Build Headless Chromium for AWS Lambda
 
 Documentation has moved [here](docs/chrome.md)
