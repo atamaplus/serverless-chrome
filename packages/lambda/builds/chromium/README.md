@@ -8,6 +8,8 @@
 2. コードを準備
   - 手順
     1. `sudo su` でrootユーザになる
+    1. `yum install -y java-1.*.0-openjdk-devel` でjavaをインストール
+    1. `alternatives --config java` で最新のjava(java8)を選択
     1. `https://github.com/atamaplus/serverless-chrome` をclone
     1. `packages/lambda/builds/chromium/build` へ移動
 
