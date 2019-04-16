@@ -48,17 +48,7 @@ cd chromium
 
 # fetch chromium source code
 # ref: https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches
-git clone https://chromium.googlesource.com/chromium/src.git
-
-(
-  cd src
-
-  # Do a pull because there are usually revisions pushed while we're cloning
-  git pull
-
-  # checkout the release tag
-  git checkout -b build "$VERSION"
-)
+git clone --depth=1 -b "$VERSION" https://chromium.googlesource.com/chromium/src.git
 
 # Checkout all the submodules at their branch DEPS revisions
 gclient sync --with_branch_heads --jobs 16
